@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palace Spa Lic# E-3382 — Dothan, Alabama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════ PALACE SPA — Light, Airy, Authentic ═══════════ */
+:root{
+  --spa:#60a9a0;--spa-dk:#4a8e86;--spa-lt:#d4eeeb;
+  --bg:#fdfcf9;--bg2:#f6f4ef;--card:#fff;
+  --tx:#2c2824;--dim:#6e6a64;--mu:#a8a49e;
+  --border:rgba(0,0,0,.06);--border-h:rgba(0,0,0,.1);
+  --radius:16px;--radius-sm:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;background:var(--bg);color:var(--tx)}
+img,iframe{display:block;max-width:100%}
+.w{max-width:1120px;margin:0 auto;padding:0 28px}
+.wn{max-width:780px;margin:0 auto;padding:0 28px}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,252,249,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:.3s}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--spa);text-decoration:none;letter-spacing:.02em}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--dim);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--spa)}
+.nav-cta a{background:var(--spa);color:#fff;padding:9px 20px;border-radius:50px;font-size:13px;font-weight:600;text-decoration:none;transition:.3s}
+.nav-cta a:hover{background:var(--spa-dk)}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.hero .w{position:relative;z-index:2}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,8vw,84px);font-weight:500;color:#fff;line-height:1.05;letter-spacing:.02em;margin-bottom:12px}
+.hero .sub{font-size:clamp(14px,2vw,17px);color:rgba(255,255,255,.75);font-weight:350;margin-bottom:36px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;transition:.3s;cursor:pointer;border:none}
+.btn-primary{background:var(--spa);color:#fff}
+.btn-primary:hover{background:var(--spa-dk);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
+
+/* ── SECTIONS ── */
+.sec{padding:90px 0}
+.sec-alt{background:var(--bg2)}
+.sec-label{font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.1em;color:var(--spa);margin-bottom:14px}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,48px);font-weight:600;line-height:1.1;margin-bottom:10px}
+.lead{font-size:15px;color:var(--dim);line-height:1.75;max-width:600px;margin-bottom:36px}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-text p{font-size:15px;color:var(--dim);line-height:1.8;margin-bottom:14px}
+
+/* ── MENU CATEGORIES ── */
+.menu-cat{margin-bottom:48px}
+.menu-cat h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--spa);margin-bottom:4px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.menu-cat .cat-desc{font-size:13px;color:var(--mu);margin-bottom:18px;font-style:italic}
+.menu-item{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border);transition:.2s}
+.menu-item:last-child{border-bottom:none}
+.menu-item:hover{background:rgba(96,169,160,.03);margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:8px}
+.menu-item .mi-left{flex:1;min-width:0}
+.menu-item .mi-name{font-size:16px;font-weight:600;color:var(--tx);margin-bottom:2px}
+.menu-item .mi-dur{font-size:12px;color:var(--mu);font-weight:500}
+.menu-item .mi-desc{font-size:13px;color:var(--dim);line-height:1.5;margin-top:2px}
+.menu-item .mi-price{font-size:18px;font-weight:700;color:var(--spa);white-space:nowrap;margin-left:16px;padding-top:2px}
+
+/* ── CAROUSEL ── */
+.carousel-wrap{position:relative;overflow:hidden;border-radius:var(--radius);margin-top:24px}
+.carousel-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track img{flex:0 0 auto;height:400px;width:auto;max-width:none;border-radius:var(--radius-sm);scroll-snap-align:start;object-fit:cover;transition:.4s}
+.carousel-track img:hover{opacity:.85}
+
+/* ── GALLERY GRID ── */
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.gal-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-sm);transition:.35s}
+.gal-grid img:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+
+/* ── CONTACT ── */
+.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.con-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;transition:.3s}
+.con-card:hover{border-color:var(--spa);box-shadow:0 4px 16px rgba(0,0,0,.04)}
+.con-card h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--spa);margin-bottom:14px}
+.con-card p,.con-card li{font-size:14px;color:var(--dim);line-height:1.8}
+.con-card ul{list-style:none;padding:0}
+.con-card li{padding:2px 0}
+.con-card .tel{display:inline-block;font-size:20px;font-weight:650;color:var(--spa);text-decoration:none;margin-top:8px;transition:.2s}
+.con-card .tel:hover{color:var(--spa-dk)}
+
+/* ── FOOTER ── */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 24px;text-align:center}
+footer p{font-size:13px;color:var(--mu);line-height:1.8}
+footer .f-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--spa);margin-bottom:6px}
+
+/* ── REVEAL ── */
+.rev{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .w,.wn{padding:0 20px}.nav-links{display:none}
+  .hero{min-height:65vh}.about-grid{grid-template-columns:1fr}
+  .con-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr}
+  .carousel-track img{height:260px}.sec{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav>
+  <div class="w">
+    <a href="#" class="nav-logo">Palace Spa</a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li><li><a href="#about">About</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="tel:+13348206033">(334) 820-6033</a></div>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<header class="hero">
+  <div class="hero-bg"><img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/0.png" alt="Palace Spa"></div>
+  <div class="w">
+    <h1 class="rev">Palace Spa</h1>
+    <p class="sub rev">Lic# E-3382 &nbsp;·&nbsp; Dothan, Alabama &nbsp;·&nbsp; Open Daily 8:30 AM – 10 PM</p>
+    <a href="#menu" class="btn btn-primary rev">View Our Menu</a>
+  </div>
+</header>
+
+<!-- ═══════ ABOUT ═══════ -->
+<section class="sec" id="about">
+  <div class="w">
+    <div class="sec-label rev">About Us</div>
+    <div class="about-grid">
+      <div class="rev">
+        <h2>Best massage<br>in Dothan</h2>
+        <p>Palace Spa located in Dothan, Alabama. We specialize in Body Massage, Foot Reflexology, Combo Massage, Thai Massage, 4 Hands Body Massage, Couple Massage, Table Shower, Body Wrap, Hot stone and Warm Coconut Oil.</p>
+        <p>Massage therapy releases energy and improves circulation, contributing to overall well-being. Regular massage therapy will help your body work better so you can live better.</p>
+        <a href="tel:+13348206033" class="btn btn-primary" style="margin-top:8px">Book Appointment →</a>
+      </div>
+      <div class="carousel-wrap rev">
+        <div class="carousel-track">
+          <img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/1.png" alt="Palace Spa" loading="lazy">
+          <img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/2.png" alt="Palace Spa" loading="lazy">
+          <img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/3.png" alt="Palace Spa" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ MENU ═══════ -->
+<section class="sec sec-alt" id="menu">
+  <div class="w">
+    <div class="sec-label rev">Our Menu</div>
+    <h2 class="rev">Signature Treatments</h2>
+    <p class="lead rev">Ten distinct therapies — each one a journey into deep relaxation and renewal.</p>
+
+    <div class="rev">
+      <div class="menu-cat">
+        <h3>Body Massage</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">30 Mins Body Massage</div><div class="mi-dur">30 minutes</div></div><div class="mi-price">$60</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">60 Mins Body Massage</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$80</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">90 Mins Body Massage</div><div class="mi-dur">90 minutes</div></div><div class="mi-price">$120</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">120 Mins Body Massage</div><div class="mi-dur">120 minutes</div></div><div class="mi-price">$160</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Foot Reflexology</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">30 Mins Foot Reflexology</div><div class="mi-dur">30 minutes</div></div><div class="mi-price">$60</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">60 Mins Foot Reflexology</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$80</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">90 Mins Foot Reflexology</div><div class="mi-dur">90 minutes</div></div><div class="mi-price">$120</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Combo Massage</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">60 Mins Combo Massage</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$80</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">90 Mins Combo Massage</div><div class="mi-dur">90 minutes</div></div><div class="mi-price">$120</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">120 Mins Combo Massage</div><div class="mi-dur">120 minutes</div></div><div class="mi-price">$160</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Thai Massage</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">60 Mins Thai Massage</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$120</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">90 Mins Thai Massage</div><div class="mi-dur">90 minutes</div></div><div class="mi-price">$180</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">120 Mins Thai Massage</div><div class="mi-dur">120 minutes</div></div><div class="mi-price">$240</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>4 Hands Body Massage</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">30 Mins 4 Hands Body Massage</div><div class="mi-dur">30 minutes</div></div><div class="mi-price">$120</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">60 Mins 4 Hands Body Massage</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$160</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">90 Mins 4 Hands Body Massage</div><div class="mi-dur">90 minutes</div></div><div class="mi-price">$240</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Couple Massage</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">30 Mins Couple Massage</div><div class="mi-dur">30 minutes</div></div><div class="mi-price">$120</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">60 Mins Couple Massage</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$160</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">90 Mins Couple Massage</div><div class="mi-dur">90 minutes</div></div><div class="mi-price">$240</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Table Shower &amp; Body Scrub</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">15 Mins Table Shower</div><div class="mi-dur">15 minutes</div></div><div class="mi-price">$30</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">30 Mins Table Shower + Body Scrub</div><div class="mi-dur">30 minutes</div></div><div class="mi-price">$50</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Body Wrap</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Body Wrap</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$30</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Hot Stone</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Hot Stone — add to any massage</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$15</div></div>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Warm Coconut Oil</h3>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Warm Coconut Oil — add to any massage</div><div class="mi-dur">60 minutes</div></div><div class="mi-price">$10</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ GALLERY ═══════ -->
+<section class="sec" id="gallery">
+  <div class="w">
+    <div class="sec-label rev">Gallery</div>
+    <h2 class="rev">Our Space</h2>
+    <p class="lead rev">Step inside Palace Spa — a serene, welcoming environment designed for your complete relaxation.</p>
+    <div class="gal-grid rev">
+      <img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/0.png" alt="Palace Spa" loading="lazy">
+      <img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/1.png" alt="Palace Spa" loading="lazy">
+      <img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/2.png" alt="Palace Spa" loading="lazy">
+      <img src="https://s3.ezordernow.com/loc_AR3ynHmgEZgS4eMVUJhkh/background_images/3.png" alt="Palace Spa" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CONTACT ═══════ -->
+<section class="sec sec-alt" id="contact">
+  <div class="w">
+    <div class="sec-label rev">Contact Us</div>
+    <h2 class="rev">Visit Us</h2>
+    <div class="con-grid rev">
+      <div class="con-card">
+        <h3>📍 Location</h3>
+        <p>2946 Ross Clark Cir #112<br>Dothan, AL 36301</p>
+        <a href="tel:+13348206033" class="tel">(334) 820-6033</a>
+        <p style="font-size:11px;color:var(--mu);margin-top:4px">Lic# E-3382</p>
+      </div>
+      <div class="con-card">
+        <h3>🕐 Business Hours</h3>
+        <p style="margin-bottom:8px">Open 7 days a week</p>
+        <p style="font-size:20px;font-weight:650;color:var(--spa)">8:30 AM — 10:00 PM</p>
+        <p style="margin-top:12px;font-size:13px;color:var(--dim)">Walk-ins welcome. Appointments recommended for the best experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="w">
+    <div class="f-name">Palace Spa</div>
+    <p>2946 Ross Clark Cir #112, Dothan, AL 36301 &nbsp;|&nbsp; (334) 820-6033<br>Lic# E-3382 &nbsp;|&nbsp; Open Daily 8:30 AM – 10:00 PM</p>
+    <p style="margin-top:8px;font-size:11px">© 2026 Palace Spa. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const o=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:.08});
+document.querySelectorAll('.rev').forEach(e=>o.observe(e));
+</script>
+</body>
+</html>
